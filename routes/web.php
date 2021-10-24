@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FreelancerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::post('/freelancers', [FreelancerController::class, 'store']);
+// Route::get('/freelancers', [FreelancerController::class, 'index']);
+// Route::get('/freelancers/{id}', [FreelancerController::class, 'show']);
+// Route::get('/freelancers/create', [FreelancerController::class, 'create']);
+
+Route::resources(['/freelancers' => FreelancerController::class]);
