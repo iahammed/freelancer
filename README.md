@@ -4,9 +4,9 @@ It was develop using laravel 8.
 
 I am creating a digital freelance site where users post some basic information about themselves and an hourly rate in a currency of their choosing. Anyone can view a specific user on the platform and view their hourly rate in any currency.
 
-### I userd service container and interface for swith between Local and external Exchange rate
+I used service container and interface for switch between Local and External Exchange rate
 
-### I userd https://exchangeratesapi.io/ external Exchange rate, It can be improve by using authorize version
+I used https://exchangeratesapi.io/ external Exchange rate, It can be improve by using authorize version
 
 ## HOW to install
 
