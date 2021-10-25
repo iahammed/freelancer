@@ -30,7 +30,7 @@ class FreelancerTest extends TestCase
     {
         $attributes = Freelancer::factory()->raw();
         $this->post('/freelancers', $attributes);
-        $this->get('/freelancers')->assertSee($attributes['email']);
+        $this->get('/freelancers')->assertSee($attributes['name']);
     }
 
     /** @test */

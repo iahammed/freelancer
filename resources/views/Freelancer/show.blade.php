@@ -16,7 +16,16 @@
     <p>{{ $freelancer->profile }}</p>
     <p>{{ $freelancer->currency }}</p>
     <p>{{ $freelancer->rate }}</p>
+    <p>{{ $freelancer->converted }}</p>
     
-    <a href="/freelancers">Free Lancers</a>
+    
+    <a href="{{ $freelancer->path()}}">Local</a>
+    &nbsp; | &nbsp;
+    <a href="{{ $freelancer->path()}}?external=true">External</a>
+
+    <br />
+    <a href="/freelancers">Freelancers Lists</a>
+
+
 </body>
 </html>

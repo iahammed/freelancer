@@ -10,7 +10,7 @@
     <h1>Freelancer</h1>
     <ul>
         @forelse($freelances as $freelance)
-            <li><a href="{{ $freelance->path() }}">Name: {{ $freelance->name }}, Email: {{ $freelance->email }}</a></li>
+            <li><a href="{{ $freelance->path() }}">{{ $freelance->name }}</a></li>
         @empty
             <li>No Freelancer yet..</li>
         @endforelse

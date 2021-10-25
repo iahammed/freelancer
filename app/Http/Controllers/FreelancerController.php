@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\CurrencyConverter\CurrencyConvertContract;
+// use App\CurrencyConverter\CurrencyConverter;
 use App\Models\Freelancer;
 use Illuminate\Http\Request;
 
@@ -55,22 +57,22 @@ class FreelancerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Freelancer  $freelancer
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Freelancer $freelancer, CurrencyConvertContract $currencyConverter)
     {
-        $freelancer = Freelancer::findOrFail($id);
+        $freelancer->converted = json_encode($currencyConverter->convert($freelancer->currency, $freelancer->rate));
         return view('freelancer.show', compact('freelancer'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Freelancer  $freelancer
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Freelancer $freelancer)
+    public function edit($id)
     {
         //
     }
@@ -79,10 +81,10 @@ class FreelancerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Freelancer  $freelancer
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Freelancer $freelancer)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -90,10 +92,10 @@ class FreelancerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Freelancer  $freelancer
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Freelancer $freelancer)
+    public function destroy($id)
     {
         //
     }

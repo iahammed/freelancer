@@ -11,18 +11,22 @@
 
     <form action="/freelancers" method="post">
         @csrf
-        name: <input type="test" name="name" value="Iftakher Ahammed"><br />
-        email: <input type="test" name="email" value="iahammed@gmail.com"><br />
-        phone: <input type="test" name="phone" value="07707492700"><br />
-        address: <input type="test" name="address" value="11 Valentines Road"><br />
-        skills: <input type="test" name="skills" value="PHP, PYTHON"><br />
-        profile: <input type="test" name="profile" value="Web Developer"><br />
-        currency: <input type="test" name="currency" value="EUR"><br />
-        rate: <input type="test" name="rate" value="75"><br />
+        name: <input type="test" name="name"><br />
+        email: <input type="test" name="email"><br />
+        phone: <input type="test" name="phone"><br />
+        address: <input type="test" name="address"><br />
+        skills: <input type="test" name="skills"><br />
+        profile: <input type="test" name="profile"><br />
+        currency: <select name ="currency">
+            <option value="GBP" selected>GBP</option>
+            <option value="EUR">EUR</option>
+            <option value="USD">USD</option>
+        </select><br />
+        rate: <input type="number" name="rate" value="75"><br />
         <input type="submit" value="save">
     </form>
 
-    <a href="/freelancers">Home</a>
+    <a href="/freelancers">Freelancers Lists</a>
 
 </body>
 </html>
