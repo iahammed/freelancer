@@ -12,8 +12,7 @@ I used https://exchangeratesapi.io/ external Exchange rate, It can be improve by
 
 1.  > composer install / update
 2.  > Update .env according to your need, .env.example is provided you may rename this to .env
-3.  > if you use .env.example provide need to run following commad to have sqlite DB
-    > touch database/database.sqlite
+3.  > if you use .env.example provide need to run following commad to have sqlite DB  > touch database/database.sqlite
 4.  > you may need to change EXCHANGE_URL at env.example to currency exchange api.
 5.  > php artisan serve
 
