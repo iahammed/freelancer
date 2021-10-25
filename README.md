@@ -26,4 +26,4 @@ I used https://exchangeratesapi.io/ external Exchange rate, It can be improve by
 
 ## Note
 
-It was created a very basic view with form inputs no form, Frontend validation and error handeling is not in place but in controller validation is in place.
+It was created a very basic view with form inputs no Frontend validation and error handeling is not in place but in controller validation is in place.
